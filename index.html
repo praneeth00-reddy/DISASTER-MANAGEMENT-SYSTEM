@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DisasterGuard - Disaster Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🚨 Disaster<span>Guard</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#disasters">Disasters</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <button class="login-btn" onclick="openLogin()">
+                Login
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                🚨 EMERGENCY RESPONSE PLATFORM
+            </p>
+
+            <h1>
+                Stay Alert.<br>
+                <span>Stay Safe.</span>
+            </h1>
+
+            <p>
+                A smart disaster management platform designed to
+                report emergencies, coordinate rescue operations,
+                locate shelters and manage resources efficiently.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="openReport()">
+                    🚨 Report Disaster
+                </button>
+
+                <button class="secondary-btn" onclick="findShelter()">
+                    🏠 Find Shelter
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="status">
+                <span class="green-dot"></span>
+                SYSTEM ACTIVE
+            </div>
+
+            <h3>Emergency Status</h3>
+
+            <div class="status-item">
+                <span>Active Incidents</span>
+                <strong id="incidentCount">24</strong>
+            </div>
+
+            <div class="status-item">
+                <span>Volunteers</span>
+                <strong>186</strong>
+            </div>
+
+            <div class="status-item">
+                <span>Safe Shelters</span>
+                <strong>42</strong>
+            </div>
+
+            <div class="status-item">
+                <span>Resources Available</span>
+                <strong>78%</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Disaster Types -->
+    <section id="disasters" class="section">
+
+        <div class="section-title">
+            <p>EMERGENCY CATEGORIES</p>
+            <h2>Disaster Types</h2>
+        </div>
+
+        <div class="disaster-grid">
+
+            <div class="disaster-card flood">
+                <div class="icon">🌊</div>
+                <h3>Flood</h3>
+                <p>Report flooding and water-related emergencies.</p>
+                <button onclick="reportType('Flood')">Report</button>
+            </div>
+
+            <div class="disaster-card fire">
+                <div class="icon">🔥</div>
+                <h3>Fire</h3>
+                <p>Report fire incidents requiring immediate response.</p>
+                <button onclick="reportType('Fire')">Report</button>
+            </div>
+
+            <div class="disaster-card cyclone">
+                <div class="icon">🌪️</div>
+                <h3>Cyclone</h3>
+                <p>Track and report cyclone-related emergencies.</p>
+                <button onclick="reportType('Cyclone')">Report</button>
+            </div>
+
+            <div class="disaster-card earthquake">
+                <div class="icon">🏚️</div>
+                <h3>Earthquake</h3>
+                <p>Report earthquake damage and affected areas.</p>
+                <button onclick="reportType('Earthquake')">Report</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Live Alerts -->
+    <section id="alerts" class="alerts-section">
+
+        <div class="section-title">
+            <p>REAL-TIME INFORMATION</p>
+            <h2>Emergency Alerts</h2>
+        </div>
+
+        <div class="alerts-container">
+
+            <div class="alert-card danger">
+                <div class="alert-icon">⚠️</div>
+                <div>
+                    <h3>Heavy Rainfall Alert</h3>
+                    <p>
+                        Heavy rainfall expected in low-lying areas.
+                        Residents are advised to stay indoors.
+                    </p>
+                    <small>Updated 10 minutes ago</small>
+                </div>
+            </div>
+
+            <div class="alert-card warning">
+                <div class="alert-icon">🌊</div>
+                <div>
+                    <h3>Flood Risk</h3>
+                    <p>
+                        Water levels are rising. Avoid unnecessary travel
+                        near rivers and low-lying areas.
+                    </p>
+                    <small>Updated 25 minutes ago</small>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Resources -->
+    <section id="resources" class="section">
+
+        <div class="section-title">
+            <p>EMERGENCY SUPPORT</p>
+            <h2>Available Resources</h2>
+        </div>
+
+        <div class="resource-grid">
+
+            <div class="resource-card">
+                <span>🚑</span>
+                <h3>Medical Teams</h3>
+                <strong>18</strong>
+                <p>Available</p>
+            </div>
+
+            <div class="resource-card">
+                <span>🚒</span>
+                <h3>Rescue Vehicles</h3>
+                <strong>12</strong>
+                <p>Available</p>
+            </div>
+
+            <div class="resource-card">
+                <span>💧</span>
+                <h3>Water Supplies</h3>
+                <strong>2,450</strong>
+                <p>Units</p>
+            </div>
+
+            <div class="resource-card">
+                <span>🏠</span>
+                <h3>Safe Shelters</h3>
+                <strong>42</strong>
+                <p>Active</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <div>
+            <p class="small-title">ABOUT THE PLATFORM</p>
+
+            <h2>
+                Faster Response.<br>
+                Better Coordination.
+            </h2>
+
+            <p>
+                DisasterGuard helps communities and authorities
+                coordinate emergency response through a centralized
+                digital platform.
+            </p>
+
+        </div>
+
+        <div class="about-features">
+
+            <div>📍 Location-based reporting</div>
+            <div>🚨 Emergency alerts</div>
+            <div>👥 Volunteer coordination</div>
+            <div>📦 Resource management</div>
+            <div>🏠 Shelter information</div>
+            <div>📊 Analytics dashboard</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            🚨 Disaster<span>Guard</span>
+        </div>
+
+        <p>
+            Smart technology for safer communities.
+        </p>
+
+        <p class="copyright">
+            © 2026 DisasterGuard. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Report Modal -->
+    <div id="reportModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeReport()">&times;</span>
+
+            <h2>🚨 Report a Disaster</h2>
+
+            <form onsubmit="submitReport(event)">
+
+                <label>Disaster Type</label>
+
+                <select id="disasterType" required>
+                    <option value="">Select disaster</option>
+                    <option>Flood</option>
+                    <option>Fire</option>
+                    <option>Cyclone</option>
+                    <option>Earthquake</option>
+                    <option>Landslide</option>
+                    <option>Accident</option>
+                    <option>Other</option>
+                </select>
+
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter location"
+                    required
+                >
+
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe the emergency..."
+                    required
+                ></textarea>
+
+
+                <button class="submit-btn" type="submit">
+                    Submit Report
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeLogin()">&times;</span>
+
+            <h2>🔐 Login</h2>
+
+            <form onsubmit="loginUser(event)">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button class="submit-btn" type="submit">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
