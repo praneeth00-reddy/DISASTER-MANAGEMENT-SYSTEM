@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,9 @@
 <body>
 
     <!-- Navigation -->
+
     <header>
+
         <nav class="navbar">
 
             <div class="logo">
@@ -20,22 +23,34 @@
             </div>
 
             <ul class="nav-links">
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#disasters">Disasters</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><a href="#alerts">Alerts</a></li>
                 <li><a href="#about">About</a></li>
+
             </ul>
 
-            <button class="login-btn" onclick="openLogin()">
-                Login
-            </button>
+            <div class="nav-buttons">
+
+                <button class="login-btn" onclick="openLogin()">
+                    User Login
+                </button>
+
+                <button class="admin-btn" onclick="openAdminLogin()">
+                    Admin Login
+                </button>
+
+            </div>
 
         </nav>
+
     </header>
 
 
     <!-- Hero Section -->
+
     <section id="home" class="hero">
 
         <div class="hero-content">
@@ -56,6 +71,7 @@
             </p>
 
             <div class="hero-buttons">
+
                 <button class="primary-btn" onclick="openReport()">
                     🚨 Report Disaster
                 </button>
@@ -63,9 +79,13 @@
                 <button class="secondary-btn" onclick="findShelter()">
                     🏠 Find Shelter
                 </button>
+
             </div>
 
         </div>
+
+
+        <!-- Status Card -->
 
         <div class="hero-card">
 
@@ -102,41 +122,85 @@
 
 
     <!-- Disaster Types -->
+
     <section id="disasters" class="section">
 
         <div class="section-title">
+
             <p>EMERGENCY CATEGORIES</p>
+
             <h2>Disaster Types</h2>
+
         </div>
+
 
         <div class="disaster-grid">
 
-            <div class="disaster-card flood">
+            <div class="disaster-card">
+
                 <div class="icon">🌊</div>
+
                 <h3>Flood</h3>
-                <p>Report flooding and water-related emergencies.</p>
-                <button onclick="reportType('Flood')">Report</button>
+
+                <p>
+                    Report flooding and water-related emergencies.
+                </p>
+
+                <button onclick="reportType('Flood')">
+                    Report
+                </button>
+
             </div>
 
-            <div class="disaster-card fire">
+
+            <div class="disaster-card">
+
                 <div class="icon">🔥</div>
+
                 <h3>Fire</h3>
-                <p>Report fire incidents requiring immediate response.</p>
-                <button onclick="reportType('Fire')">Report</button>
+
+                <p>
+                    Report fire incidents requiring immediate response.
+                </p>
+
+                <button onclick="reportType('Fire')">
+                    Report
+                </button>
+
             </div>
 
-            <div class="disaster-card cyclone">
+
+            <div class="disaster-card">
+
                 <div class="icon">🌪️</div>
+
                 <h3>Cyclone</h3>
-                <p>Track and report cyclone-related emergencies.</p>
-                <button onclick="reportType('Cyclone')">Report</button>
+
+                <p>
+                    Track and report cyclone-related emergencies.
+                </p>
+
+                <button onclick="reportType('Cyclone')">
+                    Report
+                </button>
+
             </div>
 
-            <div class="disaster-card earthquake">
+
+            <div class="disaster-card">
+
                 <div class="icon">🏚️</div>
+
                 <h3>Earthquake</h3>
-                <p>Report earthquake damage and affected areas.</p>
-                <button onclick="reportType('Earthquake')">Report</button>
+
+                <p>
+                    Report earthquake damage and affected areas.
+                </p>
+
+                <button onclick="reportType('Earthquake')">
+                    Report
+                </button>
+
             </div>
 
         </div>
@@ -145,37 +209,65 @@
 
 
     <!-- Live Alerts -->
+
     <section id="alerts" class="alerts-section">
 
         <div class="section-title">
+
             <p>REAL-TIME INFORMATION</p>
+
             <h2>Emergency Alerts</h2>
+
         </div>
+
 
         <div class="alerts-container">
 
-            <div class="alert-card danger">
-                <div class="alert-icon">⚠️</div>
+            <div class="alert-card">
+
+                <div class="alert-icon">
+                    ⚠️
+                </div>
+
                 <div>
+
                     <h3>Heavy Rainfall Alert</h3>
+
                     <p>
                         Heavy rainfall expected in low-lying areas.
                         Residents are advised to stay indoors.
                     </p>
-                    <small>Updated 10 minutes ago</small>
+
+                    <small>
+                        Updated 10 minutes ago
+                    </small>
+
                 </div>
+
             </div>
 
-            <div class="alert-card warning">
-                <div class="alert-icon">🌊</div>
+
+            <div class="alert-card">
+
+                <div class="alert-icon">
+                    🌊
+                </div>
+
                 <div>
+
                     <h3>Flood Risk</h3>
+
                     <p>
                         Water levels are rising. Avoid unnecessary travel
                         near rivers and low-lying areas.
                     </p>
-                    <small>Updated 25 minutes ago</small>
+
+                    <small>
+                        Updated 25 minutes ago
+                    </small>
+
                 </div>
+
             </div>
 
         </div>
@@ -184,41 +276,69 @@
 
 
     <!-- Resources -->
+
     <section id="resources" class="section">
 
         <div class="section-title">
+
             <p>EMERGENCY SUPPORT</p>
+
             <h2>Available Resources</h2>
+
         </div>
+
 
         <div class="resource-grid">
 
             <div class="resource-card">
+
                 <span>🚑</span>
+
                 <h3>Medical Teams</h3>
+
                 <strong>18</strong>
+
                 <p>Available</p>
+
             </div>
 
+
             <div class="resource-card">
+
                 <span>🚒</span>
+
                 <h3>Rescue Vehicles</h3>
+
                 <strong>12</strong>
+
                 <p>Available</p>
+
             </div>
 
+
             <div class="resource-card">
+
                 <span>💧</span>
+
                 <h3>Water Supplies</h3>
+
                 <strong>2,450</strong>
+
                 <p>Units</p>
+
             </div>
 
+
             <div class="resource-card">
+
                 <span>🏠</span>
+
                 <h3>Safe Shelters</h3>
+
                 <strong>42</strong>
+
                 <p>Active</p>
+
             </div>
 
         </div>
@@ -227,10 +347,14 @@
 
 
     <!-- About -->
+
     <section id="about" class="about">
 
         <div>
-            <p class="small-title">ABOUT THE PLATFORM</p>
+
+            <p class="small-title">
+                ABOUT THE PLATFORM
+            </p>
 
             <h2>
                 Faster Response.<br>
@@ -245,13 +369,19 @@
 
         </div>
 
+
         <div class="about-features">
 
             <div>📍 Location-based reporting</div>
+
             <div>🚨 Emergency alerts</div>
+
             <div>👥 Volunteer coordination</div>
+
             <div>📦 Resource management</div>
+
             <div>🏠 Shelter information</div>
+
             <div>📊 Analytics dashboard</div>
 
         </div>
@@ -260,6 +390,7 @@
 
 
     <!-- Footer -->
+
     <footer>
 
         <div class="logo">
@@ -278,11 +409,14 @@
 
 
     <!-- Report Modal -->
+
     <div id="reportModal" class="modal">
 
         <div class="modal-content">
 
-            <span class="close" onclick="closeReport()">&times;</span>
+            <span class="close" onclick="closeReport()">
+                &times;
+            </span>
 
             <h2>🚨 Report a Disaster</h2>
 
@@ -291,7 +425,11 @@
                 <label>Disaster Type</label>
 
                 <select id="disasterType" required>
-                    <option value="">Select disaster</option>
+
+                    <option value="">
+                        Select disaster
+                    </option>
+
                     <option>Flood</option>
                     <option>Fire</option>
                     <option>Cyclone</option>
@@ -299,6 +437,7 @@
                     <option>Landslide</option>
                     <option>Accident</option>
                     <option>Other</option>
+
                 </select>
 
 
@@ -332,14 +471,17 @@
     </div>
 
 
-    <!-- Login Modal -->
+    <!-- User Login Modal -->
+
     <div id="loginModal" class="modal">
 
         <div class="modal-content">
 
-            <span class="close" onclick="closeLogin()">&times;</span>
+            <span class="close" onclick="closeLogin()">
+                &times;
+            </span>
 
-            <h2>🔐 Login</h2>
+            <h2>👤 User Login</h2>
 
             <form onsubmit="loginUser(event)">
 
@@ -347,20 +489,69 @@
 
                 <input
                     type="email"
-                    placeholder="Enter email"
+                    id="userEmail"
+                    placeholder="Enter your email"
                     required
                 >
+
 
                 <label>Password</label>
 
                 <input
                     type="password"
+                    id="userPassword"
                     placeholder="Enter password"
                     required
                 >
 
+
                 <button class="submit-btn" type="submit">
-                    Login
+                    User Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Admin Login Modal -->
+
+    <div id="adminLoginModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeAdminLogin()">
+                &times;
+            </span>
+
+            <h2>🛠️ Admin Login</h2>
+
+            <form onsubmit="loginAdmin(event)">
+
+                <label>Admin Email</label>
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    placeholder="Enter admin email"
+                    required
+                >
+
+
+                <label>Admin Password</label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Enter admin password"
+                    required
+                >
+
+
+                <button class="submit-btn" type="submit">
+                    Admin Login
                 </button>
 
             </form>
@@ -373,4 +564,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
